@@ -1,0 +1,83 @@
+/* Genel Ayarlar */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: black;
+}
+
+/* Arka Plan */
+#backgroundEffect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('h1.gif') no-repeat center center; /* GIF dosyasının yolunu kontrol et */
+    background-size: cover;
+    z-index: -1; /* Arka plan en alt katmanda */
+}
+
+/* Profil Fotoğrafı Konteyneri */
+#profilePicContainer {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+}
+
+/* Profil Fotoğrafı */
+#profilePic {
+    width: 180px; /* Boyut arttırıldı */
+    height: 180px; /* Boyut arttırıldı */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Profil Altı Metin */
+#profileText {
+    position: absolute;
+    top: 50%; /* Yazıyı biraz daha aşağıya taşıdım */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Anahtar Giriş Alanı */
+#keyInputContainer {
+    position: absolute;
+    top: 65%; /* Textbox'ı daha aşağıya taşıdım */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+}
+
+#keyInput {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    outline: none;
+    background: rgba(255, 255, 255, 0.5); /* Yumuşak beyaz arka plan */
+    backdrop-filter: blur(5px); /* Blur efekti */
+}
+
+/* Placeholder stilini belirgin yap */
+#keyInput::placeholder {
+    color: #fff; /* Beyaz renk */
+    font-size: 1.2rem; /* Yazı büyüklüğü */
+    font-weight: bold; /* Yazıyı kalın yap */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Gölgeli yazı */
+}
