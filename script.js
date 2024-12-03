@@ -1,6 +1,9 @@
 window.onload = function () {
-    // Arka plan efektini ekle
-    const backgroundEffect = document.getElementById('backgroundEffect');
+    // Arka plan efektini dinamik olarak oluştur ve ayarlarını yap
+    const backgroundEffect = document.createElement('div');
+    backgroundEffect.id = 'backgroundEffect'; // ID ataması
+    document.body.appendChild(backgroundEffect); // Body içine ekle
+
     backgroundEffect.style.background = 'url("h1.gif") no-repeat center center'; // GIF dosyasının yolunu kontrol et
     backgroundEffect.style.backgroundSize = 'cover';
     backgroundEffect.style.position = 'fixed';
@@ -12,7 +15,7 @@ window.onload = function () {
 
     // Yazıları dinamik olarak ekle
     const overlayText = document.getElementById('overlayText');
-    
+
     // "Bekir.dev" yazısını ekle
     const h1 = document.createElement('h1');
     h1.textContent = 'Bekir.dev';
@@ -28,7 +31,7 @@ window.onload = function () {
     h2.style.marginBottom = '30px';
     h2.style.fontWeight = 'normal';
     overlayText.appendChild(h2);
-    
+
     // Ortalamak için gerekli stil ayarlarını ekle
     overlayText.style.position = 'absolute';
     overlayText.style.top = '40%';
@@ -50,7 +53,7 @@ window.onload = function () {
     keyInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') { // Enter tuşuna basıldığında
             const key = keyInput.value.trim();
-            const correctKey = 'bekirdev'; // Doğru anahtar
+            const correctKey = 'bekirbaba'; // Doğru anahtar
 
             if (key === correctKey) {
                 // Şifre doğru girildiğinde, inputu gizle ve success.html'ye yönlendir
