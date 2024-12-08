@@ -50,7 +50,7 @@ window.onload = function () {
     keyInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') { // Enter tuşuna basıldığında
             const key = keyInput.value.trim();
-            const correctKey1 = 'bekirdev'; // Doğru anahtar 1
+            const correctKey1 = 'bekirde'; // Doğru anahtar 1
             const correctKey2 = 'bekirbaba'; // Doğru anahtar 2
 
             if (key === correctKey1) {
