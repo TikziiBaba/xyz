@@ -49,9 +49,12 @@ window.onload = function () {
 
     keyInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') { // Enter tuşuna basıldığında
-            const key = keyInput.value.trim();
+            const key = keyInput.value.trim(); // Kullanıcıdan alınan değeri temizle
             const correctKey1 = 'bekirde'; // Doğru anahtar 1
             const correctKey2 = 'bekirbaba'; // Doğru anahtar 2
+
+            console.log('Girilen anahtar:', key); // Debug için girilen değeri yazdır
+            console.log('Doğru anahtar 1:', correctKey1);
 
             if (key === correctKey1) {
                 // Şifre doğru girildiğinde, inputu gizle ve success.html'ye yönlendir
