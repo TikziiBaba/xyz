@@ -22,7 +22,7 @@ window.onload = function () {
 
     // "Key Login" yazısını ekle
     const h2 = document.createElement('h2');
-    h2.textContent = 'Key Login';
+    h2.textContent = 'Key Login (alışveriş için "log" yazın")';
     h2.style.fontSize = '1.5rem';
     h2.style.marginTop = '0';
     h2.style.marginBottom = '30px';
@@ -51,7 +51,7 @@ window.onload = function () {
         if (event.key === 'Enter') { // Enter tuşuna basıldığında
             const key = keyInput.value.trim(); // Kullanıcıdan alınan değeri temizle
             const correctKey1 = 'bekirde'; // Doğru anahtar 1
-            const correctKey2 = 'bekirbaba'; // Doğru anahtar 2
+            const correctKey2 = 'log'; // Doğru anahtar 2
 
             console.log('Girilen anahtar:', key); // Debug için girilen değeri yazdır
             console.log('Doğru anahtar 1:', correctKey1);
