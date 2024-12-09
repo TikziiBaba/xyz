@@ -20,7 +20,7 @@ body, html {
     height: 100%;
     background: url('h1.gif') no-repeat center center; /* GIF dosyasının yolunu kontrol et */
     background-size: cover;
-    z-index: -10; /* Daha düşük bir z-index değeri ile en alt katmanda */
+    z-index: -1; /* Arka plan en alt katmanda */
 }
 
 /* Profil Fotoğrafı Konteyneri */
@@ -28,7 +28,6 @@ body, html {
     margin-bottom: 20px; /* Profil fotoğrafı ile yazı arasına boşluk ekleyelim */
     animation: slideInFromLeft 1s ease-out forwards;
     opacity: 0; /* Profil fotoğrafının başlangıçta görünmemesi için opaklık 0 */
-    z-index: 1; /* Profil fotoğrafı arka plandan yukarıda */
 }
 
 /* Profil Fotoğrafı */
@@ -39,7 +38,10 @@ body, html {
     object-fit: cover; /* Resmin orantılı bir şekilde tam dolmasını sağlar */
     transition: transform 0.3s ease-in-out;
     box-shadow: none; /* Siyah gölgeyi kaldırdım */
-    z-index: 2; /* Fotoğraf metinden bir kat daha üstte */
+}
+
+#profilePic:hover {
+    transform: scale(1.1); /* Profil fotoğrafı üzerine gelince büyür */
 }
 
 /* Profil Altı Metin */
@@ -53,14 +55,95 @@ body, html {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     animation: slideInFromBottom 1s ease-out forwards;
     max-width: 80%; /* Metnin ekranı aşmaması için */
-    z-index: 3; /* Metin, profil fotoğrafından daha yukarıda */
 }
 
 /* Anahtar Giriş Alanı */
 #keyInputContainer {
     margin-top: 40px; /* Profil metni ile şifre kutusu arasına boşluk ekleyelim */
     animation: slideInFromTop 1s ease-out forwards;
-    z-index: 4; /* Şifre kutusunun en üstte olmasını sağlar */
+    z-index: 3; /* Şifre kutusunun ön planda olmasını sağlar */
 }
 
-/* ... Diğer kodlar aynı kalır */
+#keyInput {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    outline: none;
+    background: rgba(255, 255, 255, 0.8); /* Yumuşak beyaz arka plan */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transform animasyonu ekledik */
+}
+
+#keyInput:focus {
+    background: rgba(255, 255, 255, 1); /* Input alanına tıklandığında daha belirgin hale gelir */
+    transform: scale(1.05); /* Tıklanıldığında şifre kutusunu biraz büyütür */
+}
+
+/* Placeholder stilini belirgin yap */
+#keyInput::placeholder {
+    color: #555; /* Gri renk */
+    font-size: 1.2rem; /* Yazı büyüklüğü */
+    font-weight: bold; /* Yazıyı kalın yap */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Gölgeli yazı */
+}
+
+/* Arka Plan Animasyonu */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profil Fotoğrafı Animasyonu */
+@keyframes fadeInProfilePic {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    #profileText {
+        font-size: 1.2rem; /* Mobilde yazı boyutunu küçült */
+    }
+    #profilePic {
+        width: 150px; /* Profil fotoğrafını küçült */
+        height: 150px;
+    }
+    #keyInput {
+        width: 90%;
+    }
+}
