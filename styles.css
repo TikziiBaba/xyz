@@ -8,7 +8,7 @@ body, html {
     justify-content: center; /* Ekranın ortasına yatay hizalama */
     align-items: center; /* Ekranın ortasına dikey hizalama */
     text-align: center;
-    background: #f0f0f0; /* Arka plan rengini açık gri yaptım */
+    background: #FF0000; /* Arka plan rengini açık gri yaptım */
 }
 
 /* Arka Plan */
@@ -59,7 +59,7 @@ body, html {
 
 /* Anahtar Giriş Alanı */
 #keyInputContainer {
-    margin-top: 20px; /* Profil metni ile şifre kutusu arasına boşluk ekleyelim */
+    margin-top: 40px; /* Profil metni ile şifre kutusu arasına boşluk ekleyelim */
     animation: slideInFromTop 1s ease-out forwards;
     z-index: 3; /* Şifre kutusunun ön planda olmasını sağlar */
 }
