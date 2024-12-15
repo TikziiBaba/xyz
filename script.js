@@ -57,7 +57,7 @@ function checkPassword() {
         window.location.href = "satıs.html";
     } else if (password === "30956006122") {
         window.location.href = "profil.html";
-    } else if (password === "balım") {
+    } else if (password === "ayşem") {
         window.location.href = "balım.html";
     } else {
         alert("Hatalı şifre! Lütfen tekrar deneyin.");
