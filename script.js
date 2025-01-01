@@ -5,7 +5,7 @@ function acceptProposal() {
     
     // Yeni bir mesaj göster
     const message = document.createElement('h1');
-    message.innerText = "Seni çok seviyorum, Balım! ❤️";  // İstediğiniz mesajı burada değiştirebilirsiniz
+    message.innerText = "YUUUPPİİİ! ❤️";  // İstediğiniz mesajı burada değiştirebilirsiniz
     message.style.color = '#f2994a';
     message.style.fontSize = '4em';
     message.style.textAlign = 'center';
