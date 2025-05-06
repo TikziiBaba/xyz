@@ -59,6 +59,8 @@ function checkPassword() {
         window.location.href = "profil.html";
     } else if (password === "balım") {
         window.location.href = "balım.html";
+    } else if (password === "kargonuzgeldi") {
+        windows.location.href = "loveTruck.html";
     } else {
         alert("Hatalı şifre! Lütfen tekrar deneyin.");
     }
